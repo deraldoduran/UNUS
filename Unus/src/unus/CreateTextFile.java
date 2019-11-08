@@ -15,6 +15,7 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 /**
  *
  * @author duran
@@ -40,14 +41,18 @@ public class CreateTextFile {
     public void addRecords(String nome, String matricula, String turma, String disciplina){
         //objeto a ser gravado no arquivo
         Aluno record=new Aluno();
-        try{//gera saida de valores pro arquivo
+       try{//gera saida de valores pro arquivo
         record.setNome(nome);
         record.setDisciplina(disciplina);
         record.setMatricula(matricula);
         record.setTurma(turma);
+        //output.format("%s", record.getNome());
+       // JOptionPane.showMessageDialog(null, record.getNome());
         output.format("%s %s %s %s",record.getNome(),record.getMatricula(),record.getTurma(),record.getDisciplina());
+        JOptionPane.showMessageDialog(null, "escrito no arquivo");
         }
         catch(FormatterClosedException formatterCloseException){
+            //JOptionPane.showMessageDialog(null, System.err.checkError());
             System.err.println("error writting to file");
             return;
             
