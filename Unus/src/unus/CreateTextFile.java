@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package unus;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -15,16 +16,21 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 /**
  *
  * @author duran
  */
 public class CreateTextFile {
     private Formatter output;//objeto utilizado para gerar saida de texto no arquivo
+   
+    
     //permite ao usuario abrir o arquivo
     public void openFile(){
         try{
             output =new Formatter("C:\\Users\\duran\\Documents\\curso ufc\\2 semestre\\POO\\alunos.txt"); //abre o arquivo e fim do try
+            // File tempArquivo=new File("arquivotemp.txt");
+            // FileWriter wtarquivo = new FileWriter(tempArquivo,true);
         }
         catch(SecurityException securityException){
             System.err.println("Você não tem acesso para escrever no arquivo");
@@ -37,17 +43,24 @@ public class CreateTextFile {
 
     
     //adiciona registros ao arquivo
-    public void addRecords(String nome, String matricula, String turma, String disciplina){
+    public void addRecords(String nome, String matricula, String turma, String disciplina,boolean b){
         //objeto a ser gravado no arquivo
         Aluno record=new Aluno();
-        try{//gera saida de valores pro arquivo
+       try{//gera saida de valores pro arquivo
+           
         record.setNome(nome);
         record.setDisciplina(disciplina);
         record.setMatricula(matricula);
         record.setTurma(turma);
-        output.format("%s %s %s %s",record.getNome(),record.getMatricula(),record.getTurma(),record.getDisciplina());
+        //output.format("%s", record.getNome());
+       // JOptionPane.showMessageDialog(null, record.getNome());
+       do{
+        output.format("%s %s %s %s \n",record.getNome(),record.getMatricula(),record.getTurma(),record.getDisciplina());
+        JOptionPane.showMessageDialog(null, "escrito no arquivo");
+       }while(!b);
         }
         catch(FormatterClosedException formatterCloseException){
+            //JOptionPane.showMessageDialog(null, System.err.checkError());
             System.err.println("error writting to file");
             return;
             
@@ -61,6 +74,7 @@ public class CreateTextFile {
     public void closeFile(){
         if(output != null){
             output.close();
+            
         }//arquivo fechado
     }//fimm da classe
 }

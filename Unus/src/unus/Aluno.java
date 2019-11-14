@@ -14,6 +14,11 @@ public class Aluno {
     private String nome;
     private String matricula;
     private String turma;
+
+    @Override
+    public String toString() {
+        return  (nome + ";"+ disciplina+ ";" + matricula+ ";" + turma) ;
+    }
     private String disciplina;
 
     public String getNome() {
