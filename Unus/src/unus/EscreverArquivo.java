@@ -5,20 +5,32 @@
  */
 package unus;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextPane;
 
 /**
  *
  * @author duran
  */
 public class EscreverArquivo {
-    
+   File tempArquivo;//vai ser utilizado por todos os métodos
+    Aluno record;
+   
+   
     public void setArquivo(String n1, String n2, String n3, String n4,boolean b){
 try{
-             File tempArquivo=new File("arquivotemp.txt");
-             FileWriter wtarquivo = new FileWriter(tempArquivo,true);
-             Aluno record =new Aluno();
+              tempArquivo=new File("arquivotemp.txt");
+             FileWriter wtarquivo ;
+             record =new Aluno();
              String texto;
              do{
             wtarquivo = new FileWriter(tempArquivo,true);
@@ -34,4 +46,54 @@ try{
             System.out.println("Erro ao manipular arquivo" + ex.getMessage());
         }
 }
+    
+    public String getNomeAluno(String nomeAluno){
+            FileReader rdArquivo=null;
+            BufferedReader br;
+        try{
+            tempArquivo=new File("arquivotemp.txt");
+            rdArquivo = new FileReader(tempArquivo);
+             br=new BufferedReader(rdArquivo);
+            String linha=null;
+            do{
+                linha=br.readLine();
+            
+            if(linha !=null){
+            String infos[]=linha.split(";");
+            
+            for(int i=0;i<infos.length;i++){
+                if(linha.contains(nomeAluno)){
+                    return (infos[0]+";"+infos[1]+";"+infos[2]+";"+infos[3]+";"); 
+                }
+            } 
+            }
+            }while(linha!=null);
+        }catch(Exception ex){
+            JOptionPane.showMessageDialog(null, ex);
+        }
+        
+      return ("não encontrado");  
+    }
+    
+    public void setArquivoProf(String b, String nota, String frequencia){
+            record=new Aluno();
+          try{
+              tempArquivo=new File("arquivotemp.txt");
+             FileWriter wtarquivo ;
+             record =new Aluno();
+             String texto;
+             
+            wtarquivo = new FileWriter(tempArquivo,true);
+            
+            texto=(b + nota+";" + frequencia);
+            wtarquivo.write(texto+"\n");
+        
+             wtarquivo.close();
+        }catch(Exception ex){
+            System.out.println("Erro ao manipular arquivo" + ex.getMessage());
+        }
+            
+       
+        }
+    
 }

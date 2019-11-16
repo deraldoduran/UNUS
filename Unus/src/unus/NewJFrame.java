@@ -7,6 +7,7 @@ package unus;
 
 import java.io.File;
 import java.io.FileWriter;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -32,6 +33,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel21 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jInternalFrame4 = new javax.swing.JInternalFrame();
@@ -55,7 +57,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jTextField6 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
-        jLabel22 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jTabbedPane7 = new javax.swing.JTabbedPane();
         jInternalFrame2 = new javax.swing.JInternalFrame();
         jLabel9 = new javax.swing.JLabel();
@@ -95,6 +98,9 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/unus/imagens/academy-celebrate-celebration-267885.jpg"))); // NOI18N
         jLabel26.setText("jLabel26");
+
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/unus/imagens/diretor.jpg"))); // NOI18N
+        jLabel22.setText("jLabel22");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -194,10 +200,23 @@ public class NewJFrame extends javax.swing.JFrame {
         jInternalFrame1.getContentPane().add(jTextField8);
         jTextField8.setBounds(107, 95, 61, 20);
 
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/unus/imagens/diretor.jpg"))); // NOI18N
-        jLabel22.setText("jLabel22");
-        jInternalFrame1.getContentPane().add(jLabel22);
-        jLabel22.setBounds(-2, -29, 370, 240);
+        jButton3.setText("buscar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jInternalFrame1.getContentPane().add(jButton3);
+        jButton3.setBounds(220, 40, 65, 23);
+
+        jButton4.setText("registrar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jInternalFrame1.getContentPane().add(jButton4);
+        jButton4.setBounds(100, 130, 73, 23);
 
         jTabbedPane5.addTab("Cadastrar nota e presença", jInternalFrame1);
 
@@ -215,6 +234,12 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel10.setBounds(39, 77, 30, 14);
         jInternalFrame2.getContentPane().add(jTextField9);
         jTextField9.setBounds(79, 32, 80, 20);
+
+        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField10ActionPerformed(evt);
+            }
+        });
         jInternalFrame2.getContentPane().add(jTextField10);
         jTextField10.setBounds(79, 74, 80, 20);
 
@@ -388,6 +413,27 @@ public class NewJFrame extends javax.swing.JFrame {
          registro.closeFile();//fecha o arquivo*/
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+            if (jTextField10.getText()=="123"){
+                EscreverArquivo escreve=new EscreverArquivo();
+               // escreve.setArquivoProf(jTextField6, nota, frequencia);
+            }
+    }//GEN-LAST:event_jTextField10ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        EscreverArquivo escreve=new EscreverArquivo();
+       
+                escreve.setArquivoProf(escreve.getNomeAluno(jTextField6.getText()), jTextField7.getText(), jTextField8.getText());
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+         EscreverArquivo escreve=new EscreverArquivo();
+       // if(escreve.getNomeAluno(jTextField6.getText())){
+            JOptionPane.showMessageDialog(null, jTextField6.getText());
+        //}
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -430,6 +476,8 @@ public class NewJFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JInternalFrame jInternalFrame2;
     private javax.swing.JInternalFrame jInternalFrame3;

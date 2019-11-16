@@ -1,0 +1,6 @@
+joao;001;si;bb
+juk;002;cc;poo
+null;null;null;null2121
+null;null;null;null2222
+juk002cc5555
+joao;001;si;bb;88;88
