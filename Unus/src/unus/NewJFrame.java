@@ -84,6 +84,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jTextField15 = new javax.swing.JTextField();
         jTextField16 = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
+        jLabel29 = new javax.swing.JLabel();
         jTabbedPane4 = new javax.swing.JTabbedPane();
         jInternalFrame5 = new javax.swing.JInternalFrame();
         jLabel17 = new javax.swing.JLabel();
@@ -241,10 +242,12 @@ public class NewJFrame extends javax.swing.JFrame {
         jInternalFrame2.setVisible(true);
         jInternalFrame2.getContentPane().setLayout(null);
 
+        jLabel9.setForeground(new java.awt.Color(230, 230, 230));
         jLabel9.setText("Disciplina");
         jInternalFrame2.getContentPane().add(jLabel9);
         jLabel9.setBounds(9, 35, 60, 14);
 
+        jLabel10.setForeground(new java.awt.Color(230, 230, 230));
         jLabel10.setText("Senha");
         jInternalFrame2.getContentPane().add(jLabel10);
         jLabel10.setBounds(9, 77, 60, 14);
@@ -324,6 +327,11 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jInternalFrame3.getContentPane().add(jButton5);
         jButton5.setBounds(250, 100, 100, 23);
+
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/unus/imagens/diretora.jpg"))); // NOI18N
+        jLabel29.setText("jLabel29");
+        jInternalFrame3.getContentPane().add(jLabel29);
+        jLabel29.setBounds(-10, 0, 360, 220);
 
         jTabbedPane8.addTab("Cadastro", jInternalFrame3);
 
@@ -423,8 +431,16 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
       EscreverArquivo escreve=new EscreverArquivo();
+       BuscarArquivo search =new BuscarArquivo();
+        String prerequisito=search.getinfoProf( jTextField4.getText());
+       
+        jTextField5.setText(prerequisito);
+        if(prerequisito==escreve.getinfoAluno(prerequisito, prerequisito, prerequisito, prerequisito, prerequisito, prerequisito)){
       escreve.setArquivo((jTextField1.getText()), (jTextField2.getText()), (jTextField3.getText()), (jTextField4.getText()),(jButton2.isEnabled()));
-        
+        }else{
+            jTextField5.setText("falta cursar  " + prerequisito);
+            JOptionPane.showMessageDialog(null,"matrícula não efetuada falta cursar " + prerequisito);
+        }
         /*CreateTextFile registro=new CreateTextFile();//cria o objeto
         registro.openFile();//cria o arquivo
         
@@ -442,6 +458,9 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         EscreverArquivo escreve=new EscreverArquivo();
+       /* BuscarArquivo search =new BuscarArquivo();
+        String prerequisito=search.getinfoProf(null, null, jTextField4.getText(), null);
+        jTextField5.setText(prerequisito);*/
        
                 escreve.setArquivoProf(escreve.getNomeAluno(jTextField6.getText()), jTextField7.getText(), jTextField8.getText());
         
@@ -534,6 +553,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

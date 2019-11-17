@@ -25,6 +25,7 @@ public class EscreverArquivoDiretoreCoordenador {
     Coordenador recordCoor;
     Diretor recordDiret;
     
+    
      public void setArquivo(String n1, String n2, String n3,String n4,boolean b){
 try{
               tempArquivoDiretoreCoordenador=new File("arquivotempdiretcoord.txt");

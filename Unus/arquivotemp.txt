@@ -6,3 +6,7 @@ juk002cc5555
 joao;001;si;bb;88;88
 ana;2222;hist;gg
 ana;2222;hist;gg;10;100
+nomealuno;matricula;turma;pre calculo
+Nome Aluno;Matricula;Turma;disciplina
+nome aluno1;matricula1;turma1;disciplina
+yy;nn;tt;disciplina
