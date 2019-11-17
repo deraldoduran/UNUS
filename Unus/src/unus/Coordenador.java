@@ -12,7 +12,7 @@ package unus;
 public class Coordenador extends Professor{
     private String disciplina;
     
-    public void incluirDisciplina(){
-        this.disciplina=disciplina;
+    public void incluirDisciplina(String n){
+        this.disciplina=n;
     }
 }

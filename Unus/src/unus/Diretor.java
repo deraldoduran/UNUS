@@ -13,23 +13,41 @@ public class Diretor extends Professor {
      private String curso;
      private String professor;
      private String disciplina;
-    
-    public void incluirDisciplina(){
-        this.disciplina=disciplina;
+     private String prerequisito;
+
+    public String getPrerequisito() {
+        return prerequisito;
+    }
+
+    public void setPrerequisito(String prerequisito) {
+        this.prerequisito = prerequisito;
     }
     
-    public void incluirCurso(){
-        this.curso=curso;
+    public void incluirDisciplina(String n){
+        this.disciplina=n;
     }
     
-    public void incluirProfessor(){
-        this.professor=professor;
+    public void incluirCurso(String n){
+        this.curso=n;
     }
-   static Diretor juk=new Diretor();
-    private Diretor(){
+    
+    public void incluirProfessor(String n){
+        this.professor=n;
+    }
+   static Diretor Andrea=new Diretor();
+    Diretor(){
         
     }
     public static Diretor getInstance(){
-        return  juk;
+        return  Andrea;
     }
+
+    @Override
+    public String toString() {
+        return ( /*Diretor.getInstance()+ ";" */ professor  + ";" + curso  + ";" + disciplina + ";"+ prerequisito );
+    }
+
+    
+
+   
 }

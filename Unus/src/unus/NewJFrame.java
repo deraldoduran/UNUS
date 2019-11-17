@@ -34,6 +34,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jInternalFrame4 = new javax.swing.JInternalFrame();
@@ -49,6 +50,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel27 = new javax.swing.JLabel();
         jTabbedPane5 = new javax.swing.JTabbedPane();
         jInternalFrame1 = new javax.swing.JInternalFrame();
         jLabel6 = new javax.swing.JLabel();
@@ -59,6 +61,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jTextField8 = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jLabel28 = new javax.swing.JLabel();
         jTabbedPane7 = new javax.swing.JTabbedPane();
         jInternalFrame2 = new javax.swing.JInternalFrame();
         jLabel9 = new javax.swing.JLabel();
@@ -80,7 +83,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jTextField14 = new javax.swing.JTextField();
         jTextField15 = new javax.swing.JTextField();
         jTextField16 = new javax.swing.JTextField();
-        jLabel24 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
         jTabbedPane4 = new javax.swing.JTabbedPane();
         jInternalFrame5 = new javax.swing.JInternalFrame();
         jLabel17 = new javax.swing.JLabel();
@@ -102,6 +105,9 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/unus/imagens/diretor.jpg"))); // NOI18N
         jLabel22.setText("jLabel22");
 
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/unus/imagens/diretora.jpg"))); // NOI18N
+        jLabel24.setText("jLabel24");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jInternalFrame4.setVisible(true);
@@ -109,19 +115,19 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel1.setText("Nome");
         jInternalFrame4.getContentPane().add(jLabel1);
-        jLabel1.setBounds(41, 27, 27, 14);
+        jLabel1.setBounds(41, 27, 40, 14);
 
         jLabel2.setText("Matrícula");
         jInternalFrame4.getContentPane().add(jLabel2);
-        jLabel2.setBounds(116, 27, 43, 14);
+        jLabel2.setBounds(116, 27, 70, 14);
 
         jLabel3.setText("Turma");
         jInternalFrame4.getContentPane().add(jLabel3);
-        jLabel3.setBounds(203, 27, 30, 14);
+        jLabel3.setBounds(203, 27, 50, 14);
 
         jLabel4.setText("Disciplina");
         jInternalFrame4.getContentPane().add(jLabel4);
-        jLabel4.setBounds(264, 27, 43, 14);
+        jLabel4.setBounds(264, 27, 70, 14);
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,6 +175,11 @@ public class NewJFrame extends javax.swing.JFrame {
         jInternalFrame4.getContentPane().add(jButton2);
         jButton2.setBounds(210, 160, 73, 23);
 
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/unus/imagens/academy-celebrate-celebration-267885.jpg"))); // NOI18N
+        jLabel27.setText("jLabel27");
+        jInternalFrame4.getContentPane().add(jLabel27);
+        jLabel27.setBounds(0, 0, 370, 220);
+
         jTabbedPane2.addTab("Cadastrar aluno e disciplina", jInternalFrame4);
 
         jTabbedPane1.addTab("Secretaria", jTabbedPane2);
@@ -178,15 +189,15 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel6.setText("Nome aluno");
         jInternalFrame1.getContentPane().add(jLabel6);
-        jLabel6.setBounds(18, 46, 56, 14);
+        jLabel6.setBounds(8, 46, 90, 14);
 
         jLabel7.setText("Avaliação");
         jInternalFrame1.getContentPane().add(jLabel7);
-        jLabel7.setBounds(18, 72, 46, 14);
+        jLabel7.setBounds(4, 72, 60, 14);
 
         jLabel8.setText("Frequência");
         jInternalFrame1.getContentPane().add(jLabel8);
-        jLabel8.setBounds(18, 98, 53, 14);
+        jLabel8.setBounds(1, 98, 70, 14);
         jInternalFrame1.getContentPane().add(jTextField6);
         jTextField6.setBounds(107, 43, 61, 20);
         jInternalFrame1.getContentPane().add(jTextField7);
@@ -207,7 +218,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         jInternalFrame1.getContentPane().add(jButton3);
-        jButton3.setBounds(220, 40, 65, 23);
+        jButton3.setBounds(220, 40, 90, 23);
 
         jButton4.setText("registrar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -216,7 +227,12 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         jInternalFrame1.getContentPane().add(jButton4);
-        jButton4.setBounds(100, 130, 73, 23);
+        jButton4.setBounds(100, 130, 100, 23);
+
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/unus/imagens/diretor.jpg"))); // NOI18N
+        jLabel28.setText("jLabel28");
+        jInternalFrame1.getContentPane().add(jLabel28);
+        jLabel28.setBounds(0, 0, 370, 210);
 
         jTabbedPane5.addTab("Cadastrar nota e presença", jInternalFrame1);
 
@@ -227,11 +243,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel9.setText("Disciplina");
         jInternalFrame2.getContentPane().add(jLabel9);
-        jLabel9.setBounds(26, 35, 43, 14);
+        jLabel9.setBounds(9, 35, 60, 14);
 
         jLabel10.setText("Senha");
         jInternalFrame2.getContentPane().add(jLabel10);
-        jLabel10.setBounds(39, 77, 30, 14);
+        jLabel10.setBounds(9, 77, 60, 14);
         jInternalFrame2.getContentPane().add(jTextField9);
         jTextField9.setBounds(79, 32, 80, 20);
 
@@ -245,7 +261,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel11.setText("Pré requisitos");
         jInternalFrame2.getContentPane().add(jLabel11);
-        jLabel11.setBounds(194, 35, 65, 14);
+        jLabel11.setBounds(169, 35, 90, 14);
         jInternalFrame2.getContentPane().add(jTextField11);
         jTextField11.setBounds(263, 32, 92, 75);
 
@@ -278,7 +294,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel15.setText("Professor");
         jInternalFrame3.getContentPane().add(jLabel15);
-        jLabel15.setBounds(20, 185, 46, 14);
+        jLabel15.setBounds(20, 185, 70, 14);
 
         jLabel16.setText("Senha");
         jInternalFrame3.getContentPane().add(jLabel16);
@@ -300,10 +316,14 @@ public class NewJFrame extends javax.swing.JFrame {
         jInternalFrame3.getContentPane().add(jTextField16);
         jTextField16.setBounds(98, 217, 78, 20);
 
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/unus/imagens/diretora.jpg"))); // NOI18N
-        jLabel24.setText("jLabel24");
-        jInternalFrame3.getContentPane().add(jLabel24);
-        jLabel24.setBounds(10, -20, 360, 230);
+        jButton5.setText("registrar");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jInternalFrame3.getContentPane().add(jButton5);
+        jButton5.setBounds(250, 100, 100, 23);
 
         jTabbedPane8.addTab("Cadastro", jInternalFrame3);
 
@@ -314,15 +334,15 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel17.setText("Histórico");
         jInternalFrame5.getContentPane().add(jLabel17);
-        jLabel17.setBounds(62, 57, 41, 14);
+        jLabel17.setBounds(33, 57, 70, 14);
 
         jLabel18.setText("Disciplina");
         jInternalFrame5.getContentPane().add(jLabel18);
-        jLabel18.setBounds(62, 104, 43, 14);
+        jLabel18.setBounds(25, 104, 80, 14);
 
         jLabel19.setText("Frequência");
         jInternalFrame5.getContentPane().add(jLabel19);
-        jLabel19.setBounds(62, 148, 53, 14);
+        jLabel19.setBounds(35, 148, 80, 14);
         jInternalFrame5.getContentPane().add(jTextField17);
         jTextField17.setBounds(135, 57, 159, 33);
 
@@ -344,7 +364,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel20.setText("Nome");
         jInternalFrame5.getContentPane().add(jLabel20);
-        jLabel20.setBounds(76, 34, 27, 14);
+        jLabel20.setBounds(43, 34, 60, 14);
         jInternalFrame5.getContentPane().add(jTextField20);
         jTextField20.setBounds(135, 31, 159, 20);
 
@@ -429,10 +449,19 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
          EscreverArquivo escreve=new EscreverArquivo();
-       // if(escreve.getNomeAluno(jTextField6.getText())){
+       EscreverArquivo busca=new EscreverArquivo();
+       String achei=busca.getNomeSomenteAluno(jTextField6.getText());
+       if(jTextField6.getText().equals(achei)){
             JOptionPane.showMessageDialog(null, jTextField6.getText());
-        //}
+        }else{
+           JOptionPane.showMessageDialog(null, "Aluno "+jTextField6.getText()+"  não cadastrado!");
+       }
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+       EscreverArquivoDiretoreCoordenador escreve=new EscreverArquivoDiretoreCoordenador();
+       escreve.setArquivo(jTextField15.getText(), jTextField12.getText(), jTextField13.getText(), jTextField14.getText(),jButton5.isEnabled());
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -478,6 +507,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JInternalFrame jInternalFrame2;
     private javax.swing.JInternalFrame jInternalFrame3;
@@ -502,6 +532,8 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
