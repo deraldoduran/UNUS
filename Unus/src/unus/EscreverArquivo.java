@@ -161,6 +161,7 @@ try{
             } 
             }
             }while(linha!=null);
+            rdArquivo.close();
         }catch(Exception ex){
             JOptionPane.showMessageDialog(null, ex);
         }

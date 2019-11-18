@@ -7,7 +7,11 @@ package unus;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -89,6 +93,7 @@ public class BuscarArquivo {
             }
             }
             }while(linha!=null);
+            rdArquivo.close();
         }catch(Exception ex){
             JOptionPane.showMessageDialog(null, ex);
         }
@@ -96,4 +101,54 @@ public class BuscarArquivo {
       return false;  
     }
      
+      public String getinfoProfParaCoord(String n){
+            FileReader rdArquivo=null;
+            BufferedReader br;
+        //try{
+            tempArquivoDiretoreCoordenador=new File("arquivotempdiretcoord.txt");
+        try {
+            rdArquivo = new FileReader(tempArquivoDiretoreCoordenador);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(BuscarArquivo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+             br=new BufferedReader(rdArquivo);
+            String linha=null;
+            do{
+                try {
+                    linha=br.readLine();
+                } catch (IOException ex) {
+                    Logger.getLogger(BuscarArquivo.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            
+            if(linha !=null){
+            String infos[]=linha.split(";");
+            
+            for(int i=0;i<infos.length;i++){
+                if(linha.contains(n)){//professor
+                    return (infos[1]);
+                    
+               /* }else if(linha.contains(n1)){//curso
+                    return (infos[1]);
+                    
+                }else if(linha.contains(n2)){//disciplina
+                    return(infos[3]);
+                    
+               
+            } /*else if(linha.contains(n3)){//pre requisito
+                return infos[3];
+                
+            }*/
+            }
+            }
+            }
+            
+            }while(linha!=null);
+        //}catch(Exception ex){
+ //           JOptionPane.showMessageDialog(null, ex);
+        //}
+        
+      return ("não encontrado");  
+    
+      
+}
 }

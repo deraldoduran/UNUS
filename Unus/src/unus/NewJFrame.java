@@ -35,6 +35,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jInternalFrame4 = new javax.swing.JInternalFrame();
@@ -49,7 +51,6 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jLabel27 = new javax.swing.JLabel();
         jTabbedPane5 = new javax.swing.JTabbedPane();
         jInternalFrame1 = new javax.swing.JInternalFrame();
@@ -70,7 +71,9 @@ public class NewJFrame extends javax.swing.JFrame {
         jTextField10 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jTextField11 = new javax.swing.JTextField();
-        jLabel25 = new javax.swing.JLabel();
+        jTextField21 = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
         jTabbedPane8 = new javax.swing.JTabbedPane();
         jInternalFrame3 = new javax.swing.JInternalFrame();
         jLabel12 = new javax.swing.JLabel();
@@ -109,6 +112,12 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/unus/imagens/diretora.jpg"))); // NOI18N
         jLabel24.setText("jLabel24");
 
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/unus/imagens/ph.jpg"))); // NOI18N
+        jLabel25.setText("jLabel25");
+
+        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/unus/imagens/ph.jpg"))); // NOI18N
+        jLabel31.setText("jLabel31");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jInternalFrame4.setVisible(true);
@@ -136,7 +145,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         jInternalFrame4.getContentPane().add(jTextField1);
-        jTextField1.setBounds(31, 59, 37, 20);
+        jTextField1.setBounds(21, 59, 60, 20);
 
         jTextField2.setMinimumSize(new java.awt.Dimension(59, 20));
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
@@ -171,10 +180,6 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jInternalFrame4.getContentPane().add(jButton1);
         jButton1.setBounds(80, 120, 73, 23);
-
-        jButton2.setText("encerrar");
-        jInternalFrame4.getContentPane().add(jButton2);
-        jButton2.setBounds(210, 160, 73, 23);
 
         jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/unus/imagens/academy-celebrate-celebration-267885.jpg"))); // NOI18N
         jLabel27.setText("jLabel27");
@@ -242,17 +247,17 @@ public class NewJFrame extends javax.swing.JFrame {
         jInternalFrame2.setVisible(true);
         jInternalFrame2.getContentPane().setLayout(null);
 
-        jLabel9.setForeground(new java.awt.Color(230, 230, 230));
+        jLabel9.setForeground(new java.awt.Color(130, 130, 130));
         jLabel9.setText("Disciplina");
         jInternalFrame2.getContentPane().add(jLabel9);
-        jLabel9.setBounds(9, 35, 60, 14);
+        jLabel9.setBounds(10, 70, 60, 14);
 
-        jLabel10.setForeground(new java.awt.Color(230, 230, 230));
+        jLabel10.setForeground(new java.awt.Color(130, 130, 130));
         jLabel10.setText("Senha");
         jInternalFrame2.getContentPane().add(jLabel10);
-        jLabel10.setBounds(9, 77, 60, 14);
+        jLabel10.setBounds(10, 110, 60, 14);
         jInternalFrame2.getContentPane().add(jTextField9);
-        jTextField9.setBounds(79, 32, 80, 20);
+        jTextField9.setBounds(80, 70, 80, 20);
 
         jTextField10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -260,18 +265,28 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         jInternalFrame2.getContentPane().add(jTextField10);
-        jTextField10.setBounds(79, 74, 80, 20);
+        jTextField10.setBounds(80, 110, 80, 20);
 
         jLabel11.setText("Pré requisitos");
         jInternalFrame2.getContentPane().add(jLabel11);
         jLabel11.setBounds(169, 35, 90, 14);
         jInternalFrame2.getContentPane().add(jTextField11);
         jTextField11.setBounds(263, 32, 92, 75);
+        jInternalFrame2.getContentPane().add(jTextField21);
+        jTextField21.setBounds(80, 30, 80, 20);
 
-        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/unus/imagens/ph.jpg"))); // NOI18N
-        jLabel25.setText("jLabel25");
-        jInternalFrame2.getContentPane().add(jLabel25);
-        jLabel25.setBounds(2, -3, 360, 220);
+        jLabel30.setText("Professor");
+        jInternalFrame2.getContentPane().add(jLabel30);
+        jLabel30.setBounds(10, 30, 60, 20);
+
+        jButton6.setText("Registrar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jInternalFrame2.getContentPane().add(jButton6);
+        jButton6.setBounds(70, 160, 110, 23);
 
         jTabbedPane7.addTab("Cadastrar disciplina", jInternalFrame2);
 
@@ -431,12 +446,14 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
       EscreverArquivo escreve=new EscreverArquivo();
-       BuscarArquivo search =new BuscarArquivo();
+       BuscarArquivo search =new BuscarArquivo(); //busca os prés requisitos das disciplinas que foram criados pelo diretor
         String prerequisito=search.getinfoProf( jTextField4.getText());
        
-        jTextField5.setText(prerequisito);
-        if(prerequisito==escreve.getinfoAluno(prerequisito, prerequisito, prerequisito, prerequisito, prerequisito, prerequisito)){
-      escreve.setArquivo((jTextField1.getText()), (jTextField2.getText()), (jTextField3.getText()), (jTextField4.getText()),(jButton2.isEnabled()));
+        jTextField5.setText(prerequisito);//se o aluno houver cursado o pré requisito, pode cursar a disciplina
+        if((prerequisito.equals(escreve.getinfoAluno(prerequisito, prerequisito, prerequisito, prerequisito, prerequisito, prerequisito)))||(prerequisito==null)){
+            
+      escreve.setArquivo((jTextField1.getText()), (jTextField2.getText()), (jTextField3.getText()), (jTextField4.getText()),(jButton1.isEnabled()));//matricula o aluno na disciplina
+      
         }else{
             jTextField5.setText("falta cursar  " + prerequisito);
             JOptionPane.showMessageDialog(null,"matrícula não efetuada falta cursar " + prerequisito);
@@ -482,6 +499,12 @@ public class NewJFrame extends javax.swing.JFrame {
        escreve.setArquivo(jTextField15.getText(), jTextField12.getText(), jTextField13.getText(), jTextField14.getText(),jButton5.isEnabled());
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+       EscreverArquivoDiretoreCoordenador escreve=new EscreverArquivoDiretoreCoordenador();
+       BuscarArquivo search = new BuscarArquivo();
+       escreve.setArquivo(jTextField21.getText(), search.getinfoProfParaCoord(jTextField21.getText()), jTextField9.getText(), jTextField11.getText(),jButton6.isEnabled());
+    }//GEN-LAST:event_jButton6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -523,10 +546,10 @@ public class NewJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JInternalFrame jInternalFrame2;
     private javax.swing.JInternalFrame jInternalFrame3;
@@ -555,6 +578,8 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -580,6 +605,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField20;
+    private javax.swing.JTextField jTextField21;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;

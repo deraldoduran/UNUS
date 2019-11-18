@@ -1,2 +1,3 @@
 gg;kkk;hh;kk
 professor;curso;disciplina;pre requisito
+professor;curso;logica;null
